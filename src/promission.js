@@ -10,7 +10,7 @@ var getRouter //用来获取后台拿到的路由
 router.beforeEach((to, from, next) => {
   if (!getRouter) {//不加这个判断，路由会陷入死循环
     if (!getObjArr('router')) {
-      axios.get('https://www.easy-mock.com/mock/5a5da330d9b48c260cb42ca8/example/antrouter').then(res => {
+      axios.get('https://www.easy-mock.com/mock/5ca24dfc72a51a45583aa944/example/dynamicRouter').then(res => {
         getRouter = res.data.data.router//后台拿到路由
         saveObjArr('router', getRouter) //存储路由到localStorage
 
